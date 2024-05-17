@@ -38,7 +38,7 @@ class IntArray:
         print()
 
 
-if _name_ == "_main_":
+if __name__ == "_main_":
     t = int(input())
     for _ in range(t):
 
