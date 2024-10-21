@@ -24,7 +24,7 @@ public:
             return 0;
         }
         
-        // If total XOR is zero, count the number of ways to split the array
+        // If total XOR is zero, count the number of ways to split the array.
         // We can place a partition between each of the elements.
         long long count = 1;  // There is always at least 1 way (no split).
         
