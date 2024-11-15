@@ -1,32 +1,30 @@
 class Solution:
-    def print2largest(self, arr, n):
-        # Initialize the largest and second largest with the smallest possible values
-        first = second = -1
+    def getSecondLargest(self, arr):
+        # Initialize the first and second largest as -1
+        largest = second_largest = -1
         
-        # Traverse the array to find the largest and second largest distinct elements
-        for value in arr:
-            if value > first:
-                second = first
-                first = value
-            elif value > second and value != first:
-                second = value
+        for num in arr:
+            if num > largest:
+                # Update both largest and second largest
+                second_largest = largest
+                largest = num
+            elif num > second_largest and num < largest:
+                # Update only second largest
+                second_largest = num
         
-        # If the second largest is still -1, that means there was no second distinct largest element
-        return second if second != -1 else -1
-
+        return second_largest
 
 
 #{ 
  # Driver Code Starts
 # Initial Template for Python 3
-if __name__ == '__main__':
-    tc = int(input())
-    while tc > 0:
-        n = int(input())
-        arr = list(map(int, input().strip().split()))
-        ob = Solution()
-        ans = ob.print2largest(arr, n)
-        print(ans)
-        tc -= 1
 
+if __name__ == "__main__":
+    t = int(input())
+    for _ in range(t):
+        arr = list(map(int, input().split()))
+        ob = Solution()
+        ans = ob.getSecondLargest(arr)
+        print(ans)
+        print("~")
 # } Driver Code Ends
