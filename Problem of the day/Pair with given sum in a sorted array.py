@@ -42,7 +42,6 @@ class Solution:
  # Driver Code Starts
 #Initial Template for Python 3
 
-
 def main():
     import sys
     input = sys.stdin.read
