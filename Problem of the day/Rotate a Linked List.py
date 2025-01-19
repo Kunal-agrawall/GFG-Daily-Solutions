@@ -1,8 +1,3 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-
 class Solution:
     # Function to rotate a linked list.
     def rotate(self, head, k):
